@@ -40,11 +40,8 @@ The callback passed into `map` performs the following logic:
 (use the spread operator).
 - otherwise just return the post object unchanged.
 */
-  setPosts(posts.map( post => { return postId === post.id
-    ? {...post, likes:post.likes+1} 
-    : {post}
-    }
-))
+
+setPosts(posts.map( post => { return postId === post.id ? {...post, likes: post.likes+1} : post}))
 }
 
 
